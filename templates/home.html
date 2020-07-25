@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<p>
+  Hello world {{name}}
+  <b>
+    {% for i in name %}
+    <p>{{i}}</p>
+    {% endfor %}
+  </b>
+</p>
+<form action="add" method="post">
+  {% csrf_token %} enter first number:
+  <input type="text" placeholder="enter first number" name="num1" /><br />
+  enter second number:
+  <input type="text" placeholder="enter second number" name="num2" /><br />
+  <input type="submit" />
+</form>
+{% endblock %}
