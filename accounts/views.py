@@ -52,5 +52,6 @@ def login(request):
 
 
 def logout(request):
+    print("inside login")
     auth.logout(request)
     return redirect('/')
